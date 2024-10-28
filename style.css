@@ -11,7 +11,7 @@ body {
     background: linear-gradient(135deg, #1a1a1a, #4e4e4e);
     color: white;
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden; 
 }
 
 #cracker {
@@ -55,25 +55,25 @@ button:hover:not(:disabled) {
 
 .hidden {
     opacity: 0;
-    display: none; /* Hide element completely */
+    display: none;
 }
 
 .visible {
     opacity: 1;
-    display: block; /* Show element */
+    display: block;
 }
 
 #speaker {
-    position: fixed; /* Cover the entire viewport */
+    position: fixed; 
     top: 0;
     left: 0;
-    width: 100vw; /* Cover the entire viewport */
-    height: 100vh; /* Cover the entire viewport */
-    background-color: rgba(128, 128, 128, 0.6); /* Grey background with transparency */
+    width: 100vw; 
+    height: 100vh; 
+    background-color: rgba(128, 128, 128, 0.6); 
     filter: blur(8px);
-    animation: pulse 1.5s infinite; /* Animation for the speaker */
-    display: none; /* Initially hidden */
-    z-index: -1; /* Send to the background */
+    animation: pulse 1.5s infinite;
+    display: none;
+    z-index: -1; 
 }
 
 @keyframes pulse {

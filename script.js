@@ -10,10 +10,10 @@ recognition.interimResults = false;
 
 startButton.addEventListener('click', () => {
     recognition.start();
-    startButton.style.display = 'none'; // Hide the button
-    header.style.display = 'none'; // Hide the header
-    speaker.classList.add('listening'); // Add the background animation
-    speaker.style.display = 'block'; // Show the speaker
+    startButton.style.display = 'none';
+    header.style.display = 'none';
+    speaker.classList.add('listening'); 
+    speaker.style.display = 'block';
 });
 
 const regex = /\bOPTIMUS\b/;
@@ -28,7 +28,7 @@ recognition.onresult = (event) => {
 
 recognition.onerror = (event) => {
     console.error('Error occurred in recognition:', event.error);
-    speaker.style.display = 'none'; // Hide the speaker on error
+    speaker.style.display = 'none';
 };
 
 const audio = document.getElementById("myAudio");
@@ -156,16 +156,29 @@ function FireWorkInit(apendNew) {
   }
 }
 let frm = 10;
+
 function animate() {
-  //ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "rgba(0,0,0,.1)";
+  ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
+
   frm++;
   if (frm % 20 == 0) {
     FireWorkInit(true);
   } else {
     FireWorkInit();
   }
+
+  ctx.font = "50px Poppins"; 
+  ctx.fillStyle = "white"; 
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+
+  const text = "Happy Diwali, Optimus Family";
+  const x = canvas.width / 2;
+  const y = canvas.height / 2;
+
+  ctx.fillText(text, x, y);
+
   requestAnimationFrame(animate);
 }
 animate();
