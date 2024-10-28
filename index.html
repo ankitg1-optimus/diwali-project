@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Cracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cracker">
+        <h1 id="header">Say "OPTIMUS"!</h1>
+        <button id="start-button">Start Listening</button>
+        <div id="speaker" class="hidden"><img src="microphone.png" alt=""></div>
+        <audio id="myAudio">
+            <source src="crackerAudio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <canvas id="canvas" class="canvas hidden"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
